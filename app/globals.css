@@ -1,0 +1,45 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #121212;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #505059;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #505059;
+}
+
+.input-box:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #121212 !important;
+  color: #121212 !important;
+  background-color: transparent !important;
+  background-clip: border-box !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  font-size: 16px !important;
+}
