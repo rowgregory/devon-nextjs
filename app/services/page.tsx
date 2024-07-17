@@ -32,7 +32,7 @@ const Services = () => {
               <h1 className="font-bold text-3xl mb-6">Buy Property</h1>
               <p>
                 Looking to buy a property? Our dedicated team is here to guide
-                you through every step of the process. Whether you're a
+                you through every step of the process. Whether you&apos;re a
                 first-time homebuyer or looking to invest, we offer personalized
                 assistance to help you find the perfect property.
               </p>
@@ -81,7 +81,7 @@ const Services = () => {
                   Staging and presentation tips to enhance property appeal.
                 </li>
                 <li className="list-disc ml-6 mb-2">
-                  Skilled negotiation to maximize your property's value.
+                  Skilled negotiation to maximize your property&apos;s value.
                 </li>
               </ul>
               <Link
