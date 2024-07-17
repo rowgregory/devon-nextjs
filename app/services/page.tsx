@@ -116,7 +116,7 @@ const Services = () => {
                   assistance with lease negotiations.
                 </li>
                 <li className="list-disc ml-6 mb-2">
-                  Ongoing support and guidance throughout your rental journey
+                  Ongoing support and guidance throughout your rental journey.
                 </li>
                 <li className="list-disc ml-6 mb-2">
                   Make the process as smooth as possible for you.

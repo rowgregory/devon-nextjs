@@ -14,7 +14,7 @@ const Footer = () => {
       className={`max-w-screen-xl w-full px-3 py-12 mx-auto ${['admin', 'auth'].includes(path) ? "hidden" : "block"}`}
     >
       <div className="flex items-center justify-between">
-        <Image
+        <Image onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
           src={Logo}
           alt="Devon Hunt - Nest Forward"
           width="0"

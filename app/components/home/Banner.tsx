@@ -21,7 +21,7 @@ const Banner = () => {
             Devon Hunt
           </h1>
           <div className="mx-3 md:mx-8 h-16 w-0.5 bg-[#41a9b2]"></div>
-          <p className="text-4xl md:text-6xl text-white whitespace-nowrap font-bold">
+          <p className="text-3xl sm:text-4xl md:text-6xl text-white whitespace-nowrap font-bold">
             MA Realtor®
           </p>
         </div>
