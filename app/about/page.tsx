@@ -14,7 +14,7 @@ const About = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center mt-20">
           <h1 className="font-bold text-4xl md:text-5xl text-white text-center">Hello, I&apos;m Devon Hunt</h1>
           <h4 className="pt-7 md:pt-9 pb-7 font-bold text-lg text-white tracking-wider text-center px-3">
-            Massashusetts most acceptable realtor you can trust.
+            Massashusetts most acceptable Realtor® you can trust.
           </h4>
         </div>
       </div>

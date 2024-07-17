@@ -9,6 +9,8 @@ const Banner = () => {
         autoPlay
         muted
         loop
+        playsInline
+        preload="auto"
       >
         <source src="/videos/banner.mp4" type="video/mp4" />
         Your browser does not support the video tag.

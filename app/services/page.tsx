@@ -16,7 +16,7 @@ const Services = () => {
             Services
           </h1>
           <h4 className="pt-7 lg:pt-9 pb-7 font-bold text-lg text-white tracking-wider">
-            The only realtor you will ever want
+            The only Realtor® you will ever want
           </h4>
         </div>
       </div>
@@ -31,10 +31,10 @@ const Services = () => {
             <div className="col-span-12 lg:col-span-6 h-full px-8 lg:px-16 flex justify-center flex-col ">
               <h1 className="font-bold text-3xl mb-6">Buy Property</h1>
               <p>
-                Looking to buy a property? Our dedicated team is here to guide
-                you through every step of the process. Whether you&apos;re a
-                first-time homebuyer or looking to invest, we offer personalized
-                assistance to help you find the perfect property.
+                Looking to buy a property? I am dedicated to guiding you through
+                every step of the process. Whether you&apos;re a first-time
+                homebuyer or looking to invest, I offer personalized assistance
+                to help you find the perfect property.
               </p>
               <ul className="mt-9">
                 <li className="list-disc ml-6 mb-2">
@@ -64,11 +64,10 @@ const Services = () => {
             <div className="col-span-12 lg:col-span-6 h-full px-8 lg:px-16 flex justify-center flex-col">
               <h1 className="font-bold text-3xl mb-6">Sell Property</h1>
               <p>
-                Ready to sell your property? Our experienced team is here to
-                make the process as smooth and profitable as possible. We offer
-                comprehensive market analysis, effective marketing strategies,
-                and expert negotiation skills to ensure you get the best value
-                for your property.
+                Ready to sell your property? I am here to make the process as
+                smooth and profitable as possible. I offer comprehensive market
+                analysis, effective marketing strategies, and expert negotiation
+                skills to ensure you get the best value for your property.
               </p>
               <ul className="mt-9">
                 <li className="list-disc ml-6 mb-2">
@@ -106,25 +105,21 @@ const Services = () => {
             <div className="col-span-12 lg:col-span-6 h-full px-8 lg:px-16 flex justify-center flex-col">
               <h1 className="font-bold text-3xl mb-6 pt-4">Rent Property</h1>
               <p>
-                Ready to sell your property? Our experienced team is here to
-                make the process as smooth and profitable as possible. Looking
-                to rent a property? Our knowledgeable team is dedicated to
-                finding the ideal rental that meets your needs and budget. We
-                provide personalized service, expert market insights, and a
-                seamless process to help you secure the perfect rental home.
+                Interested in a rental? I am committed to ensuring a smooth and
+                rewarding experience. I strive to find the ideal rental that
+                matches your needs and budget, offering personalized service and
+                expert market insights.
               </p>
               <ul className="mt-9">
                 <li className="list-disc ml-6 mb-2">
-                  Comprehensive listings of available rental properties.
+                  Comprehensive listings, detailed market analysis, and seamless
+                  assistance with lease negotiations.
                 </li>
                 <li className="list-disc ml-6 mb-2">
-                  Detailed market insights to help you make informed decisions.
+                  Ongoing support and guidance throughout your rental journey
                 </li>
                 <li className="list-disc ml-6 mb-2">
-                  Assistance with lease negotiations and agreements.
-                </li>
-                <li className="list-disc ml-6 mb-2">
-                  Ongoing support and guidance throughout your rental journey.
+                  Make the process as smooth as possible for you.
                 </li>
               </ul>
               <Link
