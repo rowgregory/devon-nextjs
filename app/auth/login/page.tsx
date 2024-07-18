@@ -47,7 +47,7 @@ const Login = () => {
       }
     }
     setDecodingToken(false);
-  }, [token, isAdmin]);
+  }, [token, isAdmin, navigate]);
 
   return decodingToken ? (
     <div className="min-h-screen w-full flex justify-center pt-36">
