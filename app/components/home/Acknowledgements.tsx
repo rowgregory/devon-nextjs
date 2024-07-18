@@ -26,7 +26,7 @@ const Acknowledgements = () => {
         <div className="flex flex-col justify-center items-center py-16 px-8 border-b md:border-l col-span-12 md:col-span-3 border-white">
           <FontAwesomeIcon icon={faMap} className="w-8 h-8 mb-4 text-white" />
           <p className="text-white font-semibold text-center">
-            24 Locations covered
+            Serving all of MA
           </p>
         </div>
         <div className="flex flex-col justify-center items-center py-16 px-8 border-b md:border-l md:border-r col-span-12 md:col-span-3 border-white">

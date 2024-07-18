@@ -1,9 +1,10 @@
-import { Logo } from "@/public/images";
+import { DeveloperBy, Logo } from "@/public/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import React from "react";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { usePathname } from "next/navigation";
+import Picture from "./elements/Picture";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -11,10 +12,12 @@ const Footer = () => {
 
   return (
     <footer
-      className={`max-w-screen-xl w-full px-3 py-12 mx-auto ${['admin', 'auth'].includes(path) ? "hidden" : "block"}`}
+      className={`w-full  mx-auto ${["admin", "auth"].includes(path) ? "hidden" : "block"
+        }`}
     >
-      <div className="flex items-center justify-between">
-        <Image onClick={() => window.scrollTo({ behavior: 'smooth', top: 0 })}
+      <div className="flex items-center justify-between px-3 py-12 max-w-screen-xl">
+        <Image
+          onClick={() => window.scrollTo({ behavior: "smooth", top: 0 })}
           src={Logo}
           alt="Devon Hunt - Nest Forward"
           width="0"
@@ -44,9 +47,16 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className="flex md:hidden items-center gap-8 mt-10 justify-center">
+      <div className="flex md:hidden items-center gap-8 mt-10 justify-center px-3 py-12 max-w-screen-xl">
         <p className="font-semibold">(978) 818 5303</p>
         <p className="font-semibold">devon@nestforward.com</p>
+      </div>
+      <div
+        onClick={() => window.open("https://www.sqysh.io", "_blank")}
+        className="flex items-center justify-center bg-black text-xs text-white font-semibold cursor-pointer"
+      >
+        Developed by{" "}
+        <Picture src={DeveloperBy} alt="Sqysh.io" className="w-20" />
       </div>
     </footer>
   );

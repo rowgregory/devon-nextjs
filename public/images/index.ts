@@ -14,6 +14,7 @@ import AboutBg from "./about.jpg";
 import TestimonialsBg from "./testimonials.jpg";
 import Loading from "./loading.png";
 import Ty from "./ty.png";
+import DeveloperBy from "./developed-by.png";
 
 export {
   Logo,
@@ -32,4 +33,5 @@ export {
   TestimonialsBg,
   Loading,
   Ty,
+  DeveloperBy,
 };

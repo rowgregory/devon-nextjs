@@ -11,9 +11,7 @@ const Benefits = () => {
             Benefits of working with me
           </h1>
           <p className="mb-10">
-            My objective is to not only have a good impact on ourselves and our
-            families but also to inspire, encourage, and affect long-term change
-            in everyone we meet.
+            I am here for those who require a 100% transparent, undeniably ethical Realtor; representing sellers, buyers, investors and anyone seeking knowledge to level up.
           </p>
           <ul>
             <li className="list-disc ml-6 mb-2">
