@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Massachusetts Realtor',
     images: [
       {
-        url: 'https://firebasestorage.googleapis.com/v0/b/devon-hunt-nextjs.appspot.com/o/images%2Fdevon-rich-preview.png?alt=media&token=0c1ec1c7-f7db-4024-9156-dc5848fedfa1',
+        url: 'https://firebasestorage.googleapis.com/v0/b/devon-hunt-nextjs.appspot.com/o/images%2Fdevon-rich-preview-2.png?alt=media&token=0d35d862-bf52-4af0-81d4-835314c1c5db',
         width: 1200,
         height: 630,
         alt: 'Devon Hunt - Realtor ®',
