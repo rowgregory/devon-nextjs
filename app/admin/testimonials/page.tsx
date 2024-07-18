@@ -77,7 +77,7 @@ const Testimonials = () => {
                 ADD TESTIMONIAL
               </Link>
             </div>
-            <div className="bg-zinc-900 w-full mt-3">
+            <div className="bg-zinc-900 w-full mt-3 overflow-x-scroll md:overflow-auto">
               {noTestimonials ? (
                 <div className="flex flex-col justify-center max-w-48 w-full items-center mx-auto  py-10">
                   <div className=" bg-zinc-800 h-12 w-12 flex justify-center items-center">

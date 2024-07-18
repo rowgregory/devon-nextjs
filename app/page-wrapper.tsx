@@ -14,7 +14,7 @@ const PageWrapper = ({ children }: { children: ReactNode }) => {
       <PersistGate loading={null} persistor={persistor}>
         <ChakraProvider>
           <Header />
-          <main className="min-h-[calc(100vh-584px)]">{children}</main>
+          <main className="min-h-[calc(100vh-584px)] pb-40">{children}</main>
           <Footer />
         </ChakraProvider>
       </PersistGate>

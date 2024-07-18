@@ -14,8 +14,8 @@ const TestimonialForm = ({
   isUploadingToFirebase,
 }: any) => {
   return (
-    <form className="flex flex-col gap-y-4 border-[1px] border-zinc-800 py-12 px-3 sm:px-8">
-      <div className="grid grid-cols-12 gap-10">
+    <form className="flex flex-col border-[1px] border-zinc-800 py-12 px-3 sm:px-8">
+      <div className="grid grid-cols-12 gap-y-10 md:gap-x-6">
         <div className="col-span-12 md:col-span-5 text-sm">
           Upload an image for your testimonial
         </div>
@@ -53,9 +53,9 @@ const TestimonialForm = ({
         </div>
       </div>
       <div className="h-[1px] w-full bg-zinc-800 my-12"></div>
-      <div className="grid grid-cols-12 gap-10">
+      <div className="grid grid-cols-12 gap-y-10 md:gap-x-6">
         <div className="col-span-12 md:col-span-5">Testimonial details</div>
-        <div className="col-span-12 md:col-span-7 grid gap-8">
+        <div className="col-span-12 md:col-span-7 grid gap-y-10 md:gap-x-6">
           <div className="flex flex-col">
             <label htmlFor="title" className="text-xs text-zinc-300 mb-1">
               Title

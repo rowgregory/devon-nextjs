@@ -1,6 +1,6 @@
 "use client";
 
-import { TestimonialsBg } from "@/public/images";
+import { DevonRichPreviewImg, TestimonialsBg } from "@/public/images";
 import React from "react";
 import Picture from "../components/elements/Picture";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -46,9 +46,9 @@ const Testimonials = () => {
               >
                 <div className="grid grid-cols-12 gap-6">
                   <Picture
-                    src={obj.img}
+                    src={obj.img || DevonRichPreviewImg}
                     alt="Testimonial"
-                    className="object-cover aspect-video md:aspect-square col-span-12 md:col-span-3 w-full"
+                    className="object-cover aspect-video md:aspect-square col-span-12 md:col-span-3 w-full rounded-sm"
                   />
                   <div className="col-span-12 md:col-span-9">
                     <h3 className="font-bold text-2xl mb-3">{obj.title}</h3>
@@ -56,26 +56,14 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <div className="flex items-center mt-5 mb-3 col-span-12 md:col-span-9">
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    className="w-4 h-4 mr-0.5 text-amber-500"
-                  />
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    className="w-4 h-4 mr-0.5 text-amber-500"
-                  />
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    className="w-4 h-4 mr-0.5 text-amber-500"
-                  />
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    className="w-4 h-4 mr-0.5 text-amber-500"
-                  />
-                  <FontAwesomeIcon
-                    icon={faStar}
-                    className="w-4 h-4 mr-0.5 text-amber-500"
-                  />
+                  {Array.from({ length: 5 }, (_, index: number) => (
+                    <FontAwesomeIcon
+                      key={index}
+                      icon={faStar}
+                      className="w-4 h-4 mr-0.5 text-amber-500"
+                    />
+
+                  ))}
                 </div>
                 <h4 className="text-lg">{obj.name}</h4>
                 <p className="text-sm italic text-gray-500">{obj.type}</p>

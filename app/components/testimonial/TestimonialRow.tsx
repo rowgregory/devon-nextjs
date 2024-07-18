@@ -16,9 +16,9 @@ const TestimonialRow = ({
     <tr className="bg-zinc-800 z-1 h-[3.25rem] group [&_td]:focus-within:bg-zinc-900 [&_td]:hover:bg-zinc-900 relative">
       <td className="px-2">
         <div className="m-0 w-full p-0 decoration-inherit hover:text-inherit hover:decoration-inherit !flex h-[3.25rem] items-center px-4 whitespace-nowrap">
-          <div className="max-w-[15rem]">
+          <div className="overflow-hidden">
             <span className="text-xs font-Matter-Regular truncate">
-              {testimonial?.title}
+              {testimonial?.title?.substring(0, 30)}
             </span>
           </div>
         </div>
@@ -33,12 +33,12 @@ const TestimonialRow = ({
           {formatDateWithTimezone(testimonial?.createdAt)}
         </p>
       </td>
-      <td>
+      <td className='relative'>
         {testimonialToBeEdited.open &&
           testimonialToBeEdited.testimonial?.id === testimonial?.id && (
             <div
               ref={testimonialRef}
-              className="flex flex-col justify-center shadow-lg p-1.5 absolute z-40 w-28 h-fit bg-[#0f1119] -top-[44px] right-20"
+              className="flex flex-col justify-center shadow-lg p-1.5 absolute z-40 w-28 h-fit bg-[#0f1119] -top-8 md:-top-[44px] right-16 md:right-20"
             >
               <Link
                 href={{

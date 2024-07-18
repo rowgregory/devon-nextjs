@@ -15,6 +15,10 @@ import TestimonialsBg from "./testimonials.jpg";
 import Loading from "./loading.png";
 import Ty from "./ty.png";
 import DeveloperBy from "./developed-by.png";
+import DevonRichPreviewImg from "./devon-rich-preview.png";
+import DarkMosaic from "./dark-mosaic.png";
+import Diagmonds from "./diagmonds.png";
+import DiamondUpholstery from "./diamond-upholstery.png";
 
 export {
   Logo,
@@ -34,4 +38,8 @@ export {
   Loading,
   Ty,
   DeveloperBy,
+  DevonRichPreviewImg,
+  DarkMosaic,
+  Diagmonds,
+  DiamondUpholstery,
 };
