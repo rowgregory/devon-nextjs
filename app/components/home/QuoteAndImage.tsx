@@ -1,4 +1,4 @@
-import { DarkMosaic, Devon, Devon3, Diagmonds, DiamondUpholstery } from "@/public/images";
+import { Devon, Devon3, DiamondUpholstery } from "@/public/images";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -51,8 +51,7 @@ const QuoteAndImage = () => {
           width="0"
           height="0"
           sizes="100vw"
-          className="col-span-4 md:col-span-5 h-[800px]  absolute object-cover z-0"
-          priority
+          className="col-span-4 md:col-span-5 h-[800px] absolute object-cover z-0"
         />
       </div>
       <div className="col-span-8 col-start-3 md:hidden mt-10">
@@ -63,7 +62,6 @@ const QuoteAndImage = () => {
           height="0"
           sizes="100vw"
           className="aspect-spare object-contain z-0"
-          priority
         />
       </div>
 

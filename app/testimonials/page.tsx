@@ -31,7 +31,7 @@ const Testimonials = () => {
           </h4>
         </div>
       </div>
-      <div className="bg-white w-full relative z-10 px-3 mt-[356px] pt-10 max-w-screen-xl mx-auto">
+      <div className="bg-white w-full relative z-10 px-3 mt-[356px] pt-10 max-w-screen-xl mx-auto pb-20">
         {isLoading ? (
           <Spinner
             fill="fill-black"
@@ -48,9 +48,9 @@ const Testimonials = () => {
                   <Picture
                     src={obj.img || DevonRichPreviewImg}
                     alt="Testimonial"
-                    className="object-cover aspect-video md:aspect-square col-span-12 md:col-span-3 w-full rounded-sm"
+                    className="object-contain bg-black lg:object-cover aspect-video lg:aspect-square col-span-12 lg:col-span-3 w-full rounded-sm"
                   />
-                  <div className="col-span-12 md:col-span-9">
+                  <div className="col-span-12 lg:col-span-9">
                     <h3 className="font-bold text-2xl mb-3">{obj.title}</h3>
                     <p>{obj.desc}</p>
                   </div>

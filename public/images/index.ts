@@ -19,6 +19,7 @@ import DevonRichPreviewImg from "./devon-rich-preview.png";
 import DarkMosaic from "./dark-mosaic.png";
 import Diagmonds from "./diagmonds.png";
 import DiamondUpholstery from "./diamond-upholstery.png";
+import BannerLoading from "./banner-loading.png";
 
 export {
   Logo,
@@ -42,4 +43,5 @@ export {
   DarkMosaic,
   Diagmonds,
   DiamondUpholstery,
+  BannerLoading,
 };
