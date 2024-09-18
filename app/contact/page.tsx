@@ -26,25 +26,28 @@ const Contact = () => {
   const contact = useAppSelector((state: RootState) => state.contact);
   const success = contact.success;
 
-  const handleSubmit = useCallback(async (e: any, inputs: any) => {
-    e.preventDefault();
-    const errors = contactFormValidations(inputs);
-    setErrors(errors);
-    if (Object.keys(errors).length === 0) {
-      await createContact({
-        name: inputs.name,
-        email: inputs.email,
-        phone: inputs.phone,
-        contactMethod: inputs.contactMethod,
-        inquiryType: inputs.inquiryType,
-        message: inputs.message,
-        contactTime: inputs.contactTime,
-      })
-        .unwrap()
-        .then(() => window.scrollTo(0, 0))
-        .catch((err: any) => console.log("ERROR: ", err));
-    }
-  }, []);
+  const handleSubmit = useCallback(
+    async (e: any, inputs: any) => {
+      e.preventDefault();
+      const errors = contactFormValidations(inputs);
+      setErrors(errors);
+      if (Object.keys(errors).length === 0) {
+        await createContact({
+          name: inputs.name,
+          email: inputs.email,
+          phone: inputs.phone,
+          contactMethod: inputs.contactMethod,
+          inquiryType: inputs.inquiryType,
+          message: inputs.message,
+          contactTime: inputs.contactTime,
+        })
+          .unwrap()
+          .then(() => window.scrollTo(0, 0))
+          .catch((err: any) => console.log("ERROR: ", err));
+      }
+    },
+    [contactFormValidations, createContact, setErrors]
+  );
 
   return (
     <div>
