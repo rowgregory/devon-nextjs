@@ -5,9 +5,9 @@ import { useCreateContactMutation } from "@/redux/services/contactApi";
 import { RootState, useAppSelector } from "@/redux/store";
 import useForm from "@/utils/useForm";
 import React from "react";
-import Picture from "../components/elements/Picture";
 import Acknowledgements from "../components/home/Acknowledgements";
 import Spinner from "../components/Spinner";
+import Picture from "../components/common/Picture";
 
 const Contact = () => {
   const { inputs, handleInput } = useForm([
@@ -60,9 +60,10 @@ const Contact = () => {
           {success ? (
             <div className="pt-16 flex flex-col justify-center items-center">
               <Picture
-                src={Ty}
+                src="/images/ty.png"
                 alt="Devon Hunt"
                 className="max-w-[500px] aspect-square w-full object-cover"
+                priority={false}
               />
               <Acknowledgements />
             </div>

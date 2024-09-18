@@ -1,7 +1,7 @@
-import Picture from "@/app/components/elements/Picture";
 import Spinner from "@/app/components/Spinner";
 import { faCloudArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Picture from "../common/Picture";
 
 const TestimonialForm = ({
   inputs,
@@ -35,6 +35,7 @@ const TestimonialForm = ({
                 src={inputs.img}
                 alt="Devon Hunt"
                 className="object-cover h-40 w-40 bg-zinc-950 rounded-md"
+                priority={false}
               />
             ) : (
               <div className="flex flex-col justify-center items-center">

@@ -1,7 +1,7 @@
 import React from "react";
-import { Services1, Services2, Services3, ServicesBg } from "@/public/images";
-import Picture from "../components/elements/Picture";
+import { ServicesBg } from "@/public/images";
 import Link from "next/link";
+import Picture from "../components/common/Picture";
 
 const Services = () => {
   return (
@@ -24,9 +24,10 @@ const Services = () => {
         <div className="max-w-screen-xl mx-auto w-full mt-[356px] relative z-10">
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
             <Picture
-              src={Services1}
+              src="/images/services-1.png"
               alt="Services - Buy Property"
               className="lg:h-[640px] col-span-12 w-full lg:col-span-6 aspect-video lg:aspect-square object-cover hidden lg:block"
+              priority={false}
             />
             <div className="col-span-12 lg:col-span-6 h-full px-8 lg:px-16 flex justify-center flex-col ">
               <h1 className="font-bold text-3xl mb-6">Buy Property</h1>
@@ -91,16 +92,18 @@ const Services = () => {
               </Link>
             </div>
             <Picture
-              src={Services2}
+              src="/images/services-2.png"
               alt="Services - Sell Property"
               className="col-span-12 lg:col-span-6 w-full lg:h-[640px] aspect-video lg:aspect-square object-cover hidden lg:block"
+              priority={false}
             />
           </div>
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
             <Picture
-              src={Services3}
+              src="/images/services-3.png"
               alt="Services - Rent Property"
               className="col-span-12 lg:col-span-6 w-full lg:h-[640px] aspect-video lg:aspect-square object-cover hidden lg:block"
+              priority={false}
             />
             <div className="col-span-12 lg:col-span-6 h-full px-8 lg:px-16 flex justify-center flex-col">
               <h1 className="font-bold text-3xl mb-6 pt-4">Rent Property</h1>

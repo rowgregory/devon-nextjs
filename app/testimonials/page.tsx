@@ -1,13 +1,13 @@
 "use client";
 
-import { DevonRichPreviewImg, TestimonialsBg } from "@/public/images";
+import { TestimonialsBg } from "@/public/images";
 import React from "react";
-import Picture from "../components/elements/Picture";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useGetTestimonialsQuery } from "@/redux/services/testimonialApi";
 import { RootState, useAppSelector } from "@/redux/store";
 import Spinner from "../components/Spinner";
+import Picture from "../components/common/Picture";
 
 const Testimonials = () => {
   const { isLoading } = useGetTestimonialsQuery();
@@ -46,9 +46,10 @@ const Testimonials = () => {
               >
                 <div className="grid grid-cols-12 gap-6">
                   <Picture
-                    src={obj.img || DevonRichPreviewImg}
+                    src={obj.img || "/images/devon-rich-preview.png"}
                     alt="Testimonial"
                     className="object-contain bg-black lg:object-cover aspect-video lg:aspect-square col-span-12 lg:col-span-3 w-full rounded-sm"
+                    priority={false}
                   />
                   <div className="col-span-12 lg:col-span-9">
                     <h3 className="font-bold text-2xl mb-3">{obj.title}</h3>
@@ -62,7 +63,6 @@ const Testimonials = () => {
                       icon={faStar}
                       className="w-4 h-4 mr-0.5 text-amber-500"
                     />
-
                   ))}
                 </div>
                 <h4 className="text-lg">{obj.name}</h4>
