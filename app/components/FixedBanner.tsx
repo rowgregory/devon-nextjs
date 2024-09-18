@@ -7,7 +7,7 @@ const FixedBanner = ({ bgImg, title, subtitle }: any) => {
         className="bg-cover bg-top bg-fixed absolute inset-0"
         style={{
           backgroundImage: `url(${bgImg})`,
-          backgroundSize: "140%",
+          backgroundSize: "144%",
           backgroundRepeat: "no-repeat",
         }}
       />
