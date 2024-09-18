@@ -22,34 +22,34 @@ const MobileNavigation = ({ toggleMobileNavigation, close }: any) => {
           : "left-[-100vw] w-none"
       } fixed duration-200 min-h-screen bg-zinc-950 top-0 left-0 flex flex-col items-center justify-center gap-5 z-[60]`}
     >
+      <Link href="/" onClick={close}>
+        <h1 className="tracking-wider font-bold text-[#f067a6] top-4 left-4 absolute">
+          DEVON HUNT
+        </h1>
+      </Link>
       <FontAwesomeIcon
         onClick={close}
         icon={faTimes}
-        className="text-green-400 top-4 right-4 absolute cursor-pointer"
+        className="text-[#f067a6] top-4 right-4 absolute cursor-pointer"
       />
       <Link href="/" onClick={close}>
-        <h1 className="text-5xl tracking-wider font-bold text-[#41a9b2] mb-3 duration-200 hover:tracking-widest">
-          DEVON HUNT
-        </h1>
+        <Picture
+          src="/images/tpn/tpn-logo-white-text-no-bg.png"
+          alt="The Proper Nest"
+          className="w-60 cursor-pointer mb-5"
+          priority={false}
+        />
       </Link>
       {headerLinkData.map((obj: any, i: number) => (
         <Link
           key={i}
           onClick={close}
-          className="text-[#9ac841] duration-200"
+          className="text-white duration-200"
           href={obj.path}
         >
           {obj.textKey}
         </Link>
       ))}
-      <Link href="/" onClick={close}>
-        <Picture
-          src="/images/tpn/tpn-logo-black-text-no-bg"
-          alt="The Proper Nest"
-          className="w-60 cursor-pointer mt-10"
-          priority={false}
-        />
-      </Link>
     </div>
   );
 };

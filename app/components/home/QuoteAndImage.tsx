@@ -1,9 +1,8 @@
 import React from "react";
-import Link from "next/link";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { DiamondUpholstery } from "@/public/images";
 import Picture from "../common/Picture";
+import ContactMeBtn from "../ContactMeBtn";
 
 const QuoteAndImage = () => {
   return (
@@ -20,14 +19,8 @@ const QuoteAndImage = () => {
           obtaining a home loan, with complete transparency and flawless
           service.
         </p>
-        <Link
-          href="/contact"
-          style={{ backgroundImage: `url(${DiamondUpholstery.src})` }}
-          className="font-bold tracking-wide text-center bg-center px-10 py-2.5 uppercase text-white bg-[#f067a6] duration-200 hover:bg-black hover:text-[#f067a6]"
-        >
-          Contact me
-        </Link>
-        <div className="flex items-center justify-between mt-8">
+        <ContactMeBtn />
+        <div className="flex items-center flex-col md:flex-row justify-between mt-8 gap-4">
           <p className="font-semibold flex items-center">
             <FontAwesomeIcon
               icon={faPhone}

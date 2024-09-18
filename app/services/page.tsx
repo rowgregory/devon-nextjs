@@ -2,6 +2,7 @@ import React from "react";
 import { ServicesBg } from "@/public/images";
 import Link from "next/link";
 import Picture from "../components/common/Picture";
+import ContactMeBtn from "../components/ContactMeBtn";
 
 const Services = () => {
   return (
@@ -20,7 +21,7 @@ const Services = () => {
           </h4>
         </div>
       </div>
-      <div className="bg-white w-full relative z-10">
+      <div className="bg-white w-full relative z-10 mb-40">
         <div className="max-w-screen-xl mx-auto w-full mt-[356px] relative z-10">
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
             <Picture
@@ -37,7 +38,7 @@ const Services = () => {
                 homebuyer or looking to invest, I offer personalized assistance
                 to help you find the perfect property.
               </p>
-              <ul className="mt-9">
+              <ul className="my-9">
                 <li className="list-disc ml-6 mb-2">
                   Personalized consultation to understand your needs and
                   preferences.
@@ -53,12 +54,7 @@ const Services = () => {
                   seamless transaction.
                 </li>
               </ul>
-              <Link
-                className="w-full bg-[#f067a6] py-3 text-white font-bold tracking-wide text-center mt-20"
-                href="/contact"
-              >
-                CONTACT ME
-              </Link>
+              <ContactMeBtn />
             </div>
           </div>
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
@@ -70,7 +66,7 @@ const Services = () => {
                 analysis, effective marketing strategies, and expert negotiation
                 skills to ensure you get the best value for your property.
               </p>
-              <ul className="mt-9">
+              <ul className="my-9">
                 <li className="list-disc ml-6 mb-2">
                   Detailed market analysis to determine optimal pricing.
                 </li>
@@ -84,15 +80,10 @@ const Services = () => {
                   Skilled negotiation to maximize your property&apos;s value.
                 </li>
               </ul>
-              <Link
-                className="w-full bg-[#f067a6] py-3 text-white font-bold tracking-wide text-center mt-20"
-                href="/contact"
-              >
-                CONTACT ME
-              </Link>
+              <ContactMeBtn />
             </div>
             <Picture
-              src="/images/services-2.png"
+              src="/images/services-2.jpg"
               alt="Services - Sell Property"
               className="col-span-12 lg:col-span-6 w-full lg:h-[640px] aspect-video lg:aspect-square object-cover hidden lg:block"
               priority={false}
@@ -100,7 +91,7 @@ const Services = () => {
           </div>
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
             <Picture
-              src="/images/services-3.png"
+              src="/images/services-3.jpg"
               alt="Services - Rent Property"
               className="col-span-12 lg:col-span-6 w-full lg:h-[640px] aspect-video lg:aspect-square object-cover hidden lg:block"
               priority={false}
@@ -113,7 +104,7 @@ const Services = () => {
                 matches your needs and budget, offering personalized service and
                 expert market insights.
               </p>
-              <ul className="mt-9">
+              <ul className="my-9">
                 <li className="list-disc ml-6 mb-2">
                   Comprehensive listings, detailed market analysis, and seamless
                   assistance with lease negotiations.
@@ -125,12 +116,7 @@ const Services = () => {
                   Make the process as smooth as possible for you.
                 </li>
               </ul>
-              <Link
-                className="w-full bg-[#f067a6] py-3 text-white font-bold tracking-wide text-center mt-20"
-                href="/contact"
-              >
-                CONTACT ME
-              </Link>
+              <ContactMeBtn />
             </div>
           </div>
         </div>
