@@ -46,7 +46,7 @@ const Contact = () => {
           .catch((err: any) => console.log("ERROR: ", err));
       }
     },
-    [contactFormValidations, createContact, setErrors]
+    [createContact, setErrors]
   );
 
   return (
