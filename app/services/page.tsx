@@ -1,6 +1,5 @@
 import React from "react";
 import { ServicesBg } from "@/public/images";
-import Link from "next/link";
 import Picture from "../components/common/Picture";
 import ContactMeBtn from "../components/ContactMeBtn";
 
@@ -21,7 +20,7 @@ const Services = () => {
           </h4>
         </div>
       </div>
-      <div className="bg-white w-full relative z-10 mb-40">
+      <div className="bg-white w-full relative z-10 pb-40">
         <div className="max-w-screen-xl mx-auto w-full mt-[356px] relative z-10">
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
             <Picture
