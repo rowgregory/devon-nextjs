@@ -11,7 +11,7 @@ import React from "react";
 const Acknowledgements = () => {
   return (
     <div
-      className="bg-[#f067a6] w-full mb-32 relative z-10 bg-center"
+      className="bg-[#f067a6] w-full relative z-10 bg-center"
       style={{ backgroundImage: `url(${DarkMosaic.src})` }}
     >
       <div className="grid grid-cols-12 mx-auto max-w-[1100px]">

@@ -19,7 +19,7 @@ const ContactInput = ({
         name={name}
         value={value}
         onChange={handleInput}
-        className="input-box h-10 focus:outline-none border-b-2 border-[#f067a6]"
+        className="input-box h-10 focus:outline-none border-b-2 border-[#f067a6] rounded-none"
       />
       {error && <p className="text-red-500 text-sm">{error}</p>}
     </div>

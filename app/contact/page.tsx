@@ -9,6 +9,7 @@ import Acknowledgements from "../components/home/Acknowledgements";
 import Picture from "../components/common/Picture";
 import ContactForm from "../components/forms/ContactForm";
 import contactFormValidations from "../validations/contactFormValidations";
+import FixedBanner from "../components/FixedBanner";
 
 const Contact = () => {
   const { inputs, handleInput, setErrors, errors } = useForm([
@@ -47,20 +48,14 @@ const Contact = () => {
 
   return (
     <div>
-      <div
-        style={{ backgroundImage: `url(${ContactMeBg.src})` }}
-        className="bg-center bg-cover fixed top-0 left-0 w-full h-[450px] z-0 overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-black/50 z-0" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center mt-20">
-          <h1 className="font-bold text-5xl text-white text-center">Contact</h1>
-          <h4 className="pt-7 md:pt-9 pb-7 font-bold text-lg text-white tracking-wider">
-            Helping you get more for your real estate
-          </h4>
-        </div>
-      </div>
+      <FixedBanner
+        bgImg={ContactMeBg.src}
+        title="Contact"
+        subtitle="Helping you get more for your real estate."
+      />
+
       <div className="bg-white w-full relative z-10">
-        <div className="w-full mx-auto mt-[356px]">
+        <div className="w-full mx-auto">
           {success ? (
             <div className="pt-16 flex flex-col justify-center items-center">
               <Picture

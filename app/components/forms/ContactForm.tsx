@@ -2,6 +2,7 @@ import React from "react";
 import Spinner from "../Spinner";
 import ContactInput from "../form-elements/ContactInput";
 import ContactSelect from "../form-elements/ContactSelect";
+import { DiamondUpholstery } from "@/public/images";
 
 const contactMethodFields = [
   {
@@ -124,7 +125,8 @@ const ContactForm = ({
       ) : (
         <button
           onClick={(e: any) => handleSubmit(e, inputs)}
-          className="w-full mt-8 py-2 bg-[#f067a6] font-bold text-lg text-white uppercase"
+          style={{ backgroundImage: `url(${DiamondUpholstery.src})` }}
+          className="font-bold tracking-wide text-center bg-center px-10 py-2.5 uppercase text-white bg-[#f067a6] duration-200 hover:bg-black hover:text-[#f067a6]"
         >
           Submit
         </button>

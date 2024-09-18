@@ -24,7 +24,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-[730px]">
+    <div className="relative w-full h-[730px] border-b-4 border-[#f067a6]">
       {loading && (
         <Picture
           src="/images/banner-loading.png"

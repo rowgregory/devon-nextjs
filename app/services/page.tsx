@@ -2,26 +2,18 @@ import React from "react";
 import { ServicesBg } from "@/public/images";
 import Picture from "../components/common/Picture";
 import ContactMeBtn from "../components/ContactMeBtn";
+import FixedBanner from "../components/FixedBanner";
 
 const Services = () => {
   return (
     <div>
-      <div
-        style={{ backgroundImage: `url(${ServicesBg.src})` }}
-        className="bg-center bg-cover fixed top-0 left-0 w-full h-[450px] z-0"
-      >
-        <div className="absolute inset-0 bg-black/50 z-0" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center mt-20">
-          <h1 className="font-bold text-5xl text-white text-center">
-            Services
-          </h1>
-          <h4 className="pt-7 lg:pt-9 pb-7 font-bold text-lg text-white tracking-wider">
-            The only Realtor® you will ever want
-          </h4>
-        </div>
-      </div>
-      <div className="bg-white w-full relative z-10 pb-40">
-        <div className="max-w-screen-xl mx-auto w-full mt-[356px] relative z-10">
+      <FixedBanner
+        bgImg={ServicesBg.src}
+        title="Services"
+        subtitle="The only Realtor® you will ever want"
+      />
+      <div className="bg-white w-full relative z-10 py-40">
+        <div className="max-w-screen-xl mx-auto w-full relative z-10">
           <div className="grid grid-cols-12 pt-10 lg:pt-0">
             <Picture
               src="/images/services-1.png"

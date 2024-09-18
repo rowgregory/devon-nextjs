@@ -3,7 +3,7 @@ import Picture from "../common/Picture";
 
 const Benefits = () => {
   return (
-    <div className="max-w-screen-xl w-full mx-auto mb-32 px-3 sm:px-10">
+    <div className="max-w-screen-xl w-full mx-auto my-32 px-3 sm:px-10">
       <div className="grid grid-cols-12 gap-y-10 gap-x-6 items-center">
         <div className="col-span-12 md:col-span-6">
           <h1 className="text-3xl font-semibold mb-7">
