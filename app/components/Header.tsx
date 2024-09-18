@@ -11,8 +11,7 @@ import Picture from "./common/Picture";
 import socialMediaIconsData from "@/public/data/socialmediaIconsData";
 
 const Header = () => {
-  const pathname = usePathname();
-  const path = pathname.split("/")[1];
+  const path = usePathname();
   const [toggleMobileNavigation, setToggleMobileNavigation] = useState(false);
   const close = () => setToggleMobileNavigation(false);
 
@@ -32,12 +31,12 @@ const Header = () => {
           />
         </Link>
         <div className="gap-10 hidden lg:flex">
-          {headerLinkData.map((obj: any, i: number) => (
+          {headerLinkData(path).map((obj: any, i: number) => (
             <Link
               key={i}
               className={`${
-                path === obj.match ? "border-[#f067a6]" : ""
-              } text-sm hover:border-[#f067a6] border-b-4 border-white`}
+                obj.active ? "border-[#f067a6]" : "border-white"
+              } text-sm hover:border-[#f067a6] border-b-4 focus:border-[#f067a6]`}
               href={obj.path}
             >
               {obj.textKey}

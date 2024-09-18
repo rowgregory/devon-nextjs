@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import headerLinkData from "@/public/data/headerLinkData";
 import { useEffect } from "react";
 import Picture from "./common/Picture";
+import { usePathname } from "next/navigation";
 
 const MobileNavigation = ({ toggleMobileNavigation, close }: any) => {
+  const path = usePathname();
   useEffect(() => {
     if (toggleMobileNavigation) {
       document.body.style.overflow = "hidden";
@@ -40,7 +44,7 @@ const MobileNavigation = ({ toggleMobileNavigation, close }: any) => {
           priority={false}
         />
       </Link>
-      {headerLinkData.map((obj: any, i: number) => (
+      {headerLinkData(path).map((obj: any, i: number) => (
         <Link
           key={i}
           onClick={close}

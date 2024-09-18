@@ -9,6 +9,7 @@ const useForm = (fields: any) => {
   }, {});
 
   const [inputs, setInputs] = useState(initialInputs);
+  const [errors, setErrors] = useState({}) as any;
 
   const handleInput = (e: any) => {
     const { name, value } = e.target;
@@ -22,6 +23,8 @@ const useForm = (fields: any) => {
   return {
     inputs,
     handleInput,
+    setErrors,
+    errors,
   };
 };
 
