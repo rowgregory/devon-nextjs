@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, FormEvent, Fragment, RefObject } from "react";
 import Typewriter from "@/app/components/Typewriter";
-import Spinner from '@/app/components/Spinner';
+import Spinner from "@/app/components/Spinner";
 
 interface LockProps {
   inputRef: RefObject<HTMLInputElement>;
@@ -41,12 +41,14 @@ const Lock: FC<LockProps> = ({
         />
 
         {isLoading ? (
-          <Spinner fill="fill-[#41a9b2]" />
+          <Spinner fill="fill-pink-400" />
         ) : (
           <button
             type="submit"
             disabled={code === ""}
-            className={`${code === "" ? "" : "cursor-pointer"} font-bold bg-[#41a9b2] px-7 py-2 rounded-sm w-full text-white uppercase`}
+            className={`${
+              code === "" ? "" : "cursor-pointer"
+            } font-bold bg-[#f067a6] px-7 py-2 rounded-sm w-full text-white uppercase`}
           >
             Submit
           </button>

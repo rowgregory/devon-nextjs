@@ -1,18 +1,23 @@
-'use client';
+"use client";
 
-import DeleteModal, { useDeleteModal } from '@/app/components/common/DeleteModal';
-import Spinner from '@/app/components/Spinner';
-import MagnifyingGlass from '@/public/svg/MagnifyingGlass';
-import TestimonialsTable from '@/app/components/testimonial/TestimonialsTable';
-import { useDeleteTestimonialMutation, useGetTestimonialsQuery } from '@/redux/services/testimonialApi';
-import { RootState, useAppSelector } from '@/redux/store';
-import useOutsideDetect from '@/utils/useOutsideDetect';
-import Link from 'next/link';
-import { Fragment, useCallback, useRef, useState } from 'react';
+import DeleteModal, {
+  useDeleteModal,
+} from "@/app/components/common/DeleteModal";
+import Spinner from "@/app/components/Spinner";
+import MagnifyingGlass from "@/public/svg/MagnifyingGlass";
+import TestimonialsTable from "@/app/components/testimonial/TestimonialsTable";
+import {
+  useDeleteTestimonialMutation,
+  useGetTestimonialsQuery,
+} from "@/redux/services/testimonialApi";
+import { RootState, useAppSelector } from "@/redux/store";
+import useOutsideDetect from "@/utils/useOutsideDetect";
+import Link from "next/link";
+import { Fragment, useCallback, useRef, useState } from "react";
 
 const Testimonials = () => {
-  const [text, setText] = useState('');
-  const [idAndName, setIdAndName] = useState({ id: '', name: '' });
+  const [text, setText] = useState("");
+  const [idAndName, setIdAndName] = useState({ id: "", name: "" });
   const testimonials = useAppSelector(
     (state: RootState) => state.testimonial.testimonials
   );
@@ -53,11 +58,13 @@ const Testimonials = () => {
       <div className="w-full mx-auto pt-6 pb-12 md:pt-16 px-[10px] sm:px-[16px] md:px-8">
         {isLoading ? (
           <div className="flex justify-center">
-            <Spinner fill="fill-[#3c6265]" wAndH="w-10 h-10" />
+            <Spinner fill="fill-pink-400" wAndH="w-10 h-10" />
           </div>
         ) : (
           <Fragment>
-            <div className="font-Matter-Medium text-xl mb-3.5 text-zinc-200">Testimonials</div>
+            <div className="font-Matter-Medium text-xl mb-3.5 text-zinc-200">
+              Testimonials
+            </div>
             <div className="flex justify-between">
               <div className="flex items-center font-Matter-Light border border-zinc-800 py-2 px-[16px] ">
                 <MagnifyingGlass />
@@ -69,10 +76,10 @@ const Testimonials = () => {
               </div>
               <Link
                 href={{
-                  pathname: '/admin/testimonial',
+                  pathname: "/admin/testimonial",
                   query: { isEditMode: false },
                 }}
-                className="whitespace-nowrap w-fit px-4 duration-200 hover:no-underline text-center flex justify-center items-center font-Matter-Medium bg-[#356368] text-xs text-white py-2 font-bold"
+                className="whitespace-nowrap w-fit px-4 duration-200 hover:no-underline text-center flex justify-center items-center font-Matter-Medium bg-[#f067a6] text-xs text-white py-2 font-bold"
               >
                 ADD TESTIMONIAL
               </Link>
@@ -83,7 +90,9 @@ const Testimonials = () => {
                   <div className=" bg-zinc-800 h-12 w-12 flex justify-center items-center">
                     <MagnifyingGlass />
                   </div>
-                  <div className="text-xs my-2 text-zinc-300">No testimonials</div>
+                  <div className="text-xs my-2 text-zinc-300">
+                    No testimonials
+                  </div>
                 </div>
               ) : (
                 <TestimonialsTable

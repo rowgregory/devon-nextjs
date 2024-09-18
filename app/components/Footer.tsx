@@ -1,15 +1,13 @@
-import { DeveloperBy, Logo } from "@/public/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import React from "react";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { usePathname } from "next/navigation";
-import Picture from "./elements/Picture";
 import {
   faEnvelope,
   faHouse,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import Picture from "./common/Picture";
+import socialMediaIconsData from "@/public/data/socialmediaIconsData";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -17,52 +15,54 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full bg-zinc-50 mx-auto ${["admin", "auth"].includes(path) ? "hidden" : "block"
-        }`}
+      className={`w-full bg-zinc-50 mx-auto ${
+        ["admin", "auth"].includes(path) ? "hidden" : "block"
+      }`}
     >
-      <div className=' px-3 pt-12 pb-5 max-w-screen-xl mx-auto'>
+      <div className=" px-3 pt-12 pb-5 max-w-screen-xl mx-auto">
         <div className="flex items-center justify-between pb-6">
-          <Image
-            onClick={() => window.scrollTo({ behavior: "smooth", top: 0 })}
-            src={Logo}
-            alt="Devon Hunt - Nest Forward"
-            width="0"
-            height="0"
-            sizes="100vw"
-            className="w-60"
-          />
+          <span onClick={() => window.scrollTo({ behavior: "smooth", top: 0 })}>
+            <Picture
+              src="/images/tpn/tpn-logo-black-text-no-bg.png"
+              alt="The Proper Nest"
+              className="w-60"
+              priority={false}
+            />
+          </span>
           <div className="flex items-center gap-2">
-            <FontAwesomeIcon
-              onClick={() =>
-                window.open("https://www.facebook.com/devondhunt", "_blank")
-              }
-              icon={faFacebook}
-              className="text-[#41a9b2] w-8 h-8 cursor-pointer"
-            />
-            <FontAwesomeIcon
-              onClick={() =>
-                window.open("https://www.instagram.com/devondhunt/", "_blank")
-              }
-              icon={faInstagram}
-              className="text-[#41a9b2] w-8 h-8 cursor-pointer"
-            />
+            {socialMediaIconsData.map((obj, i) => (
+              <div
+                key={i}
+                onClick={() => window.open(obj.linkKey, "_blank")}
+                className="w-10 h-10 rounded-full hover:bg-black flex items-center justify-center group"
+              >
+                <FontAwesomeIcon
+                  key={i}
+                  icon={obj.icon}
+                  className="text-[#121212] w-6 h-6 cursor-pointer group-hover:text-[#f067a6]"
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex flex-col mt-5 mb-2 gap-y-3">
           <p className="font-semibold flex items-center text-gray-700">
             <FontAwesomeIcon
               icon={faPhone}
-              className="text-[#78ba3b] mr-1 -rotate-90"
+              className="text-[#f067a6] mr-2 -rotate-90"
             />
             +1 (978) 818 5303
           </p>
           <p className="font-semibold flex items-center text-gray-700">
-            <FontAwesomeIcon icon={faEnvelope} className="text-[#78ba3b] mr-1" />
-            devon@nestforward.com
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="text-[#f067a6] mr-2"
+            />
+            devon@thepropernest.com
           </p>
           <p className="font-semibold text-gray-700 flex items-center">
-            <FontAwesomeIcon icon={faHouse} className="text-[#78ba3b] mr-1" />
-            105 Charter St, Boston 02113
+            <FontAwesomeIcon icon={faHouse} className="text-[#f067a6] mr-2" />
+            257 Washington St #3, Marblehead 01945
           </p>
         </div>
       </div>
@@ -70,8 +70,13 @@ const Footer = () => {
         onClick={() => window.open("https://www.sqysh.io", "_blank")}
         className="flex items-center justify-center bg-black text-xs text-white font-semibold cursor-pointer py-1.5"
       >
-        Developed by
-        <Picture src={DeveloperBy} alt="Sqysh.io" className="w-28 ml-1.5" />
+        <span className="mt-4"> Developed by</span>
+        <Picture
+          src="/images/sqysh-no-bg-white-text-2.png"
+          alt="Sqysh.io"
+          className="w-24 ml-1.5"
+          priority={false}
+        />
       </div>
     </footer>
   );

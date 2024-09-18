@@ -53,7 +53,7 @@ const Services = () => {
                 </li>
               </ul>
               <Link
-                className="w-full bg-[#9ac841] py-3 text-white font-bold tracking-wide text-center mt-20"
+                className="w-full bg-[#f067a6] py-3 text-white font-bold tracking-wide text-center mt-20"
                 href="/contact"
               >
                 CONTACT ME
@@ -84,7 +84,7 @@ const Services = () => {
                 </li>
               </ul>
               <Link
-                className="w-full bg-[#9ac841] py-3 text-white font-bold tracking-wide text-center mt-20"
+                className="w-full bg-[#f067a6] py-3 text-white font-bold tracking-wide text-center mt-20"
                 href="/contact"
               >
                 CONTACT ME
@@ -123,7 +123,7 @@ const Services = () => {
                 </li>
               </ul>
               <Link
-                className="w-full bg-[#9ac841] py-3 text-white font-bold tracking-wide text-center mt-20"
+                className="w-full bg-[#f067a6] py-3 text-white font-bold tracking-wide text-center mt-20"
                 href="/contact"
               >
                 CONTACT ME

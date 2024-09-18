@@ -1,27 +1,26 @@
 import Link from "next/link";
-import { Logo } from "@/public/images";
-import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import headerLinkData from "@/public/data/headerLinkData";
-import { useEffect } from 'react';
+import { useEffect } from "react";
+import Picture from "./common/Picture";
 
 const MobileNavigation = ({ toggleMobileNavigation, close }: any) => {
-
   useEffect(() => {
     if (toggleMobileNavigation) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ''
+      document.body.style.overflow = "";
     }
-  }, [toggleMobileNavigation])
+  }, [toggleMobileNavigation]);
 
   return (
     <div
-      className={`${toggleMobileNavigation
-        ? "w-screen left-0 overflow-hidden bottom-0 right-0"
-        : "left-[-100vw] w-none"
-        } fixed duration-200 min-h-screen bg-zinc-950 top-0 left-0 flex flex-col items-center justify-center gap-5 z-[60]`}
+      className={`${
+        toggleMobileNavigation
+          ? "w-screen left-0 overflow-hidden bottom-0 right-0"
+          : "left-[-100vw] w-none"
+      } fixed duration-200 min-h-screen bg-zinc-950 top-0 left-0 flex flex-col items-center justify-center gap-5 z-[60]`}
     >
       <FontAwesomeIcon
         onClick={close}
@@ -44,10 +43,11 @@ const MobileNavigation = ({ toggleMobileNavigation, close }: any) => {
         </Link>
       ))}
       <Link href="/" onClick={close}>
-        <Image
-          src={Logo}
+        <Picture
+          src="/images/tpn/tpn-logo-black-text-no-bg"
+          alt="The Proper Nest"
           className="w-60 cursor-pointer mt-10"
-          alt="Nest Forward"
+          priority={false}
         />
       </Link>
     </div>

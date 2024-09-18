@@ -26,11 +26,11 @@ const LoginForm = ({ handleSubmit, handleInput, isLoading }: any) => {
       />
 
       {isLoading ? (
-        <Spinner fill="fill-[#41a9b2]" />
+        <Spinner fill="fill-pink-400" />
       ) : (
         <button
           type="submit"
-          className="font-bold bg-[#41a9b2] px-7 py-2 rounded-sm w-full text-white uppercase"
+          className="font-bold bg-[#f067a6] px-7 py-2 rounded-sm w-full text-white uppercase"
         >
           Log In
         </button>

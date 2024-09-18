@@ -1,15 +1,14 @@
 "use client";
 
-import { Logo } from "@/public/images";
 import { faBars, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import MobileNavigation from "./MobileNavigation";
 import headerLinkData from "@/public/data/headerLinkData";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Picture from "./common/Picture";
+import socialMediaIconsData from "@/public/data/socialmediaIconsData";
 
 const Header = () => {
   const pathname = usePathname();
@@ -24,24 +23,21 @@ const Header = () => {
         close={close}
       />
       <div className="p-3 md:pt-4 pb-3 flex items-center justify-between relative z-10 bg-white">
-        <Link href='/'>
-          <Image
-            src={Logo}
-            alt="Devon Hunt"
-            width="0"
-            height="0"
-            sizes="100vw"
-            className="w-52 md:w-72"
+        <Link href="/">
+          <Picture
+            src="/images/tpn/tpn-logo-black-text-no-bg.png"
+            alt="The Proper Nest"
+            className="w-52"
+            priority={false}
           />
         </Link>
         <div className="gap-10 hidden lg:flex">
           {headerLinkData.map((obj: any, i: number) => (
             <Link
               key={i}
-              className={`${path === obj.match
-                ? "border-b-4 border-[#41a9b2]"
-                : "border-b-2 border-white"
-                } text-sm`}
+              className={`${
+                path === obj.match ? "border-[#f067a6]" : ""
+              } text-sm hover:border-[#f067a6] border-b-4 border-white`}
               href={obj.path}
             >
               {obj.textKey}
@@ -53,24 +49,26 @@ const Header = () => {
           icon={faBars}
           className="block lg:hidden text-black cursor-pointer"
         />
-        <div className="flex items-center gap-2">
-          <FontAwesomeIcon
-            onClick={() =>
-              window.open("https://www.facebook.com/devondhunt", "_blank")
-            }
-            icon={faFacebook}
-            className="text-[#41a9b2] w-8 h-8 cursor-pointer"
-          />
-          <FontAwesomeIcon
-            onClick={() =>
-              window.open("https://www.instagram.com/devondhunt/", "_blank")
-            }
-            icon={faInstagram}
-            className="text-[#41a9b2] w-8 h-8 cursor-pointer"
-          />
+        <div className="flex items-center">
+          {socialMediaIconsData.map((obj, i) => (
+            <div
+              key={i}
+              onClick={() => window.open(obj.linkKey, "_blank")}
+              className="w-10 h-10 rounded-full hover:bg-black flex items-center justify-center group"
+            >
+              <FontAwesomeIcon
+                key={i}
+                icon={obj.icon}
+                className="text-[#121212] w-6 h-6 cursor-pointer group-hover:text-[#f067a6]"
+              />
+            </div>
+          ))}
         </div>
       </div>
-      <Link href='/auth/login' className='bg-gray-100 px-3 md:px-6 py-0.5 flex justify-end items-center w-full relative z-10'>
+      <Link
+        href="/auth/login"
+        className="bg-gray-100 px-3 md:px-6 py-0.5 flex justify-end items-center w-full relative z-10"
+      >
         <FontAwesomeIcon icon={faUser} />
       </Link>
     </div>

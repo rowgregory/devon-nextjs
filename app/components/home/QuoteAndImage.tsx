@@ -1,9 +1,9 @@
-import { Devon, Devon3, DiamondUpholstery } from "@/public/images";
+import React from "react";
+import Link from "next/link";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { DiamondUpholstery } from "@/public/images";
+import Picture from "../common/Picture";
 
 const QuoteAndImage = () => {
   return (
@@ -23,7 +23,7 @@ const QuoteAndImage = () => {
         <Link
           href="/contact"
           style={{ backgroundImage: `url(${DiamondUpholstery.src})` }}
-          className="font-bold tracking-wide text-center bg-center px-10 py-2.5 uppercase text-white bg-[#78ba3b] duration-200"
+          className="font-bold tracking-wide text-center bg-center px-10 py-2.5 uppercase text-white bg-[#f067a6] duration-200 hover:bg-black hover:text-[#f067a6]"
         >
           Contact me
         </Link>
@@ -31,40 +31,35 @@ const QuoteAndImage = () => {
           <p className="font-semibold flex items-center">
             <FontAwesomeIcon
               icon={faPhone}
-              className="text-[#78ba3b] mr-1 -rotate-90"
+              className="text-[#f067a6] mr-1 -rotate-90"
             />
             +1 (978) 818 5303
           </p>
           <p className="font-semibold flex items-center">
             <FontAwesomeIcon
               icon={faEnvelope}
-              className="text-[#78ba3b] mr-1"
+              className="text-[#f067a6] mr-1"
             />
-            devon@nestforward.com
+            devon@thepropernest.com
           </p>
         </div>
       </div>
       <div className="relative w-[226px] hidden md:block">
-        <Image
-          src={Devon3}
+        <Picture
+          src="/images/devon-3-no-bg.png"
           alt="Devon Hunt"
-          width="0"
-          height="0"
-          sizes="100vw"
-          className="col-span-4 md:col-span-5 h-[800px] absolute object-cover z-0"
+          className="col-span-4 md:col-span-5 h-[800px] absolute object-cover z-0 w-full"
+          priority={false}
         />
       </div>
       <div className="col-span-8 col-start-3 md:hidden mt-10">
-        <Image
-          src={Devon}
+        <Picture
+          src="/images/devon-no-bg.png"
           alt="Devon Hunt"
-          width="0"
-          height="0"
-          sizes="100vw"
           className="aspect-spare object-contain z-0"
+          priority={false}
         />
       </div>
-
     </div>
   );
 };

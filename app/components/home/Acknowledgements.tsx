@@ -1,4 +1,4 @@
-import { DarkMosaic, Diagmonds } from '@/public/images';
+import { DarkMosaic } from "@/public/images";
 import {
   faCrown,
   faMap,
@@ -10,7 +10,10 @@ import React from "react";
 
 const Acknowledgements = () => {
   return (
-    <div className="bg-[#41a9b2] w-full mb-32 relative z-10 bg-center" style={{ backgroundImage: `url(${DarkMosaic.src})` }}>
+    <div
+      className="bg-[#f067a6] w-full mb-32 relative z-10 bg-center"
+      style={{ backgroundImage: `url(${DarkMosaic.src})` }}
+    >
       <div className="grid grid-cols-12 mx-auto max-w-[1100px]">
         <div className="flex flex-col justify-center items-center py-16 px-8 border-b md:border-l col-span-12 md:col-span-3 border-white">
           <FontAwesomeIcon icon={faCrown} className="w-8 h-8 mb-4 text-white" />
@@ -26,9 +29,7 @@ const Acknowledgements = () => {
         </div>
         <div className="flex flex-col justify-center items-center py-16 px-8 border-b md:border-l col-span-12 md:col-span-3 border-white">
           <FontAwesomeIcon icon={faMap} className="w-8 h-8 mb-4 text-white" />
-          <p className="text-white font-bold text-center">
-            Serving all of MA
-          </p>
+          <p className="text-white font-bold text-center">Serving all of MA</p>
         </div>
         <div className="flex flex-col justify-center items-center py-16 px-8 border-b md:border-l md:border-r col-span-12 md:col-span-3 border-white">
           <FontAwesomeIcon icon={faStar} className="w-8 h-8 mb-4 text-white" />

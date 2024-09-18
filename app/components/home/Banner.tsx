@@ -1,9 +1,8 @@
-'use client'
+"use client";
 
-import { BannerLoading } from "@/public/images";
-import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import Picture from "../common/Picture";
 
 const Banner = () => {
   const [loading, setLoading] = useState(true);
@@ -14,12 +13,12 @@ const Banner = () => {
 
     const videoElement = videoRef.current;
     if (videoElement) {
-      videoElement.addEventListener('loadeddata', handleLoad);
+      videoElement.addEventListener("loadeddata", handleLoad);
     }
 
     return () => {
       if (videoElement) {
-        videoElement.removeEventListener('loadeddata', handleLoad);
+        videoElement.removeEventListener("loadeddata", handleLoad);
       }
     };
   }, []);
@@ -27,14 +26,11 @@ const Banner = () => {
   return (
     <div className="relative w-full h-[730px]">
       {loading && (
-        <Image
-          src={BannerLoading}
+        <Picture
+          src="/images/banner-loading.png"
           alt="Loading banner"
           className="block w-full h-full object-cover absolute top-0 left-0 z-0"
-          priority
-          width='0'
-          height='0'
-          sizes='100vw'
+          priority={true}
         />
       )}
       <video
@@ -55,21 +51,21 @@ const Banner = () => {
           <h1 className="text-3xl sm:text-4xl md:text-6xl text-white whitespace-nowrap font-bold">
             Devon Hunt
           </h1>
-          <div className="mx-3 md:mx-8 h-16 w-0.5 bg-[#41a9b2]"></div>
+          <div className="mx-3 md:mx-8 h-16 w-0.5 bg-[#f067a6]"></div>
           <p className="text-3xl sm:text-4xl md:text-6xl text-white whitespace-nowrap font-bold">
             MA Realtor®
           </p>
         </div>
         <p className="text-white text-3xl font-bold tracking-wider mb-16 px-16">
           I deliver the very best in all facets of{" "}
-          <span className="text-[#41a9b2] whitespace-nowrap">real estate.</span>{" "}
+          <span className="text-[#f067a6] whitespace-nowrap">real estate.</span>{" "}
           <br />
           Because you deserve no less.
         </p>
         <div className="flex items-center gap-5">
           <Link
             href="/contact"
-            className="px-10 py-2.5 uppercase text-white border-4 border-[#78ba3b] font-bold hover:bg-[#78ba3b] duration-200"
+            className="px-10 py-2.5 uppercase text-white border-4 border-white font-bold hover:bg-black hover:text-[#f067a6] duration-200"
           >
             Contact me
           </Link>

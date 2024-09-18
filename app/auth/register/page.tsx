@@ -2,8 +2,6 @@
 
 import React, { FormEvent, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import { Logo } from "@/public/images";
 import Link from "next/link";
 import {
   useRegisterMutation,
@@ -12,7 +10,8 @@ import {
 import useForm from "@/utils/useForm";
 import RegisterForm from "@/redux/features/auth/components/RegisterForm";
 import { RootState, useAppSelector } from "@/redux/store";
-import Lock from '@/redux/features/auth/components/Lock';
+import Lock from "@/redux/features/auth/components/Lock";
+import Picture from "@/app/components/common/Picture";
 
 const Register = () => {
   const [register, { isLoading }] = useRegisterMutation();
@@ -45,25 +44,22 @@ const Register = () => {
       .unwrap()
       .then((data: any) => {
         if (data?.codeValidated) {
-          inputRef.current.value = '';
+          inputRef.current.value = "";
         }
       })
       .catch((err: any) => {
-        inputRef.current.value = '';
-        console.error('ERROR: ', err)
+        inputRef.current.value = "";
+        console.error("ERROR: ", err);
       });
   };
 
   return (
     <div className="flex flex-col pt-40 items-center">
       <Link href="/">
-        <Image
-          src={Logo}
-          alt="Nest Forward"
-          width="0"
-          height="0"
-          sizes="100vw"
-          priority
+        <Picture
+          src="/images/tpn/tpn-logo-black-text-no-bg.png"
+          alt="The Proper Nest"
+          priority={false}
           className="w-80 mb-12"
         />
       </Link>

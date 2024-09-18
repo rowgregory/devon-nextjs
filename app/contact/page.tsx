@@ -80,7 +80,7 @@ const Contact = () => {
                 name="name"
                 value={inputs.name}
                 onChange={handleInput}
-                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#f067a6]"
               />
               <label htmlFor="email" className="text-sm">
                 Email
@@ -91,7 +91,7 @@ const Contact = () => {
                 name="email"
                 value={inputs.email}
                 onChange={handleInput}
-                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#f067a6]"
               />
               <label htmlFor="phone" className="text-sm">
                 Phone Number
@@ -102,7 +102,7 @@ const Contact = () => {
                 name="phone"
                 value={inputs.phone}
                 onChange={handleInput}
-                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#f067a6]"
               />
               <label htmlFor="contactMethod" className="text-sm">
                 Contact Method
@@ -112,7 +112,7 @@ const Contact = () => {
                 name="contactMethod"
                 value={inputs.contactMethod}
                 onChange={handleInput}
-                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#f067a6]"
               >
                 <option value="">Choose One</option>
                 <option value="email">Email</option>
@@ -127,7 +127,7 @@ const Contact = () => {
                 name="inquiryType"
                 value={inputs.inquiryType}
                 onChange={handleInput}
-                className="mb-6 h-10 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="mb-6 h-10 focus:outline-none border-b-2 border-[#f067a6]"
               >
                 <option value="">Choose One</option>
                 <option value="buying">Buying</option>
@@ -144,7 +144,7 @@ const Contact = () => {
                 rows={7}
                 value={inputs.message}
                 onChange={handleInput}
-                className="input-box mb-6 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="input-box mb-6 focus:outline-none border-b-2 border-[#f067a6]"
               ></textarea>
               <label htmlFor="contactTime" className="text-sm">
                 Contact Time
@@ -155,14 +155,14 @@ const Contact = () => {
                 name="contactTime"
                 value={inputs.contactTime}
                 onChange={handleInput}
-                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#41a9b2]"
+                className="input-box mb-6 h-10 focus:outline-none border-b-2 border-[#f067a6]"
               />
               {isLoading ? (
                 <Spinner fill="fill-black mx-auto flex self-center" />
               ) : (
                 <button
                   type="submit"
-                  className="w-full mt-8 py-2 bg-[#41a9b2] font-bold text-lg text-white uppercase"
+                  className="w-full mt-8 py-2 bg-[#f067a6] font-bold text-lg text-white uppercase"
                 >
                   Submit
                 </button>

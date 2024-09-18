@@ -1,14 +1,13 @@
 "use client";
 
+import Picture from "@/app/components/common/Picture";
 import Spinner from "@/app/components/Spinner";
 import Typewriter from "@/app/components/Typewriter";
-import { Logo } from "@/public/images";
 import LoginForm from "@/redux/features/auth/components/LoginForm";
 import { useLoginMutation } from "@/redux/services/authApi";
 import { RootState, useAppSelector } from "@/redux/store";
 import extractAndDecodeJWT from "@/utils/extractAndDecodeJWT";
 import useForm from "@/utils/useForm";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { FormEvent, useEffect, useState } from "react";
@@ -56,13 +55,10 @@ const Login = () => {
   ) : (
     <div className="flex flex-col items-center pt-40">
       <Link href="/">
-        <Image
-          src={Logo}
-          alt="Nest Forward"
-          width="0"
-          height="0"
-          sizes="100vw"
-          priority
+        <Picture
+          src="/images/tpn/tpn-logo-black-text-no-bg.png"
+          alt="The Proper Nest"
+          priority={false}
           className="w-80 mb-12"
         />
       </Link>

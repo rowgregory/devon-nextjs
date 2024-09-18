@@ -41,7 +41,7 @@ export default function RootLayout({
         <Suspense
           fallback={
             <div className="min-h-screen w-full flex justify-center pt-36">
-              <Spinner fill="fill-[#42a9b3]" wAndH="w-10 h-10" />
+              <Spinner fill="fill-pink-300" wAndH="w-10 h-10" />
             </div>
           }
         >
