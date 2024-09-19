@@ -1,26 +1,28 @@
+"use client";
+
 import React from "react";
+import { ParallaxBanner, ParallaxBannerLayer } from "react-scroll-parallax";
 
 const FixedBanner = ({ bgImg, title, subtitle }: any) => {
   return (
-    <div className="relative w-full h-[300px] sm:h-[450px]">
-      <div
-        className="bg-cover bg-top bg-fixed absolute inset-0"
-        style={{
-          backgroundImage: `url(${bgImg})`,
-          backgroundSize: "144%",
-          backgroundRepeat: "no-repeat",
-        }}
+    <ParallaxBanner className="h-[450px]">
+      <ParallaxBannerLayer
+        image={bgImg}
+        speed={-40}
+        className="bg-no-repeat fixed-banner"
+        style={{}}
       />
-      <div className="absolute inset-0 bg-black/50" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 z-10">
-        <h1 className="text-4xl sm:text-5xl font-bold text-white text-center">
-          {title}
-        </h1>
-        <h4 className="pt-4 sm:pt-7 pb-4 sm:pb-7 font-bold text-base sm:text-lg text-white tracking-wider text-center">
-          {subtitle}
-        </h4>
-      </div>
-    </div>
+      <ParallaxBannerLayer>
+        <div className="absolute bg-black/50 inset-0 flex flex-col items-center justify-center p-4 sm:p-6 z-10">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white text-center">
+            {title}
+          </h1>
+          <h4 className="pt-4 sm:pt-7 pb-4 sm:pb-7 font-bold text-base sm:text-lg text-white tracking-wider text-center">
+            {subtitle}
+          </h4>
+        </div>
+      </ParallaxBannerLayer>
+    </ParallaxBanner>
   );
 };
 

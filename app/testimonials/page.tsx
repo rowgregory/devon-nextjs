@@ -1,6 +1,5 @@
 "use client";
 
-import { TestimonialsBg } from "@/public/images";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -19,7 +18,7 @@ const Testimonials = () => {
   return (
     <div>
       <FixedBanner
-        bgImg={TestimonialsBg.src}
+        bgImg="/images/testimonials-bg.jpg"
         title="Testimonials"
         subtitle="Helping you get more for your real estate."
       />

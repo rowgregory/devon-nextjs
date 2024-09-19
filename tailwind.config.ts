@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        "3xl": "1650px",
+      },
       keyframes: {
         bounceHorizontal: {
           "0%, 100%": { transform: "translateX(0)" },

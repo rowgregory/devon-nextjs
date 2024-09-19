@@ -1,6 +1,5 @@
 "use client";
 
-import { ContactMeBg } from "@/public/images";
 import { useCreateContactMutation } from "@/redux/services/contactApi";
 import { RootState, useAppSelector } from "@/redux/store";
 import useForm from "@/utils/useForm";
@@ -52,7 +51,7 @@ const Contact = () => {
   return (
     <div>
       <FixedBanner
-        bgImg={ContactMeBg.src}
+        bgImg="/images/contact-bg.jpg"
         title="Contact"
         subtitle="Helping you get more for your real estate."
       />
