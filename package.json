@@ -27,7 +27,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-redux": "^9.1.2",
-    "react-scroll-parallax": "^3.4.5",
     "redux-persist": "^6.0.0",
     "uifx": "^2.0.7"
   },

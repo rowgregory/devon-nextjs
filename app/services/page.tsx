@@ -1,5 +1,4 @@
 import React from "react";
-import { ServicesBg } from "@/public/images";
 import Picture from "../components/common/Picture";
 import ContactMeBtn from "../components/ContactMeBtn";
 import FixedBanner from "../components/FixedBanner";
@@ -8,7 +7,7 @@ const Services = () => {
   return (
     <div>
       <FixedBanner
-        bgImg={ServicesBg.src}
+        bgImg="/images/boston-night-panorama.jpg"
         title="Services"
         subtitle="The only Realtor® you will ever want"
       />

@@ -43,21 +43,3 @@ body {
   transition: background-color 5000s ease-in-out 0s !important;
   font-size: 16px !important;
 }
-
-.fixed-banner {
-  inset: -200px 0px !important;
-  background-position-y: -150px !important;
-}
-
-@media screen and (min-width: 768px) {
-  .fixed-banner {
-    inset: -400px 0px !important;
-    background-position-y: -100px !important;
-  }
-}
-
-@media screen and (min-width: 2230px) {
-  .fixed-banner {
-    background-position-y: -200px !important;
-  }
-}

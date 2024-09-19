@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <div>
       <FixedBanner
-        bgImg="/images/contact-bg.jpg"
+        bgImg="/images/boston-back-bay-panorama.jpg"
         title="Contact"
         subtitle="Helping you get more for your real estate."
       />

@@ -1,4 +1,3 @@
-import { AboutBg } from "@/public/images";
 import React from "react";
 import QuoteAndImage from "../components/home/QuoteAndImage";
 import Acknowledgements from "../components/home/Acknowledgements";
@@ -8,7 +7,7 @@ const About = () => {
   return (
     <div>
       <FixedBanner
-        bgImg={AboutBg.src}
+        bgImg="/images/boston-skyline-river.jpg"
         title="Hello, I'm Devon Hunt"
         subtitle="Realtor® you can trust."
       />

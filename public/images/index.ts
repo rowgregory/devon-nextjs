@@ -8,9 +8,6 @@ import ServicesBg from "./services-bg.jpg";
 import Services1 from "./services-1.png";
 import Services2 from "./services-2.jpg";
 import Services3 from "./services-3.jpg";
-import ContactMeBg from "./contact.jpg";
-import AboutBg from "./about.jpg";
-import TestimonialsBg from "./testimonials.jpg";
 import Loading from "./loading.png";
 import Ty from "./ty.png";
 import DevonRichPreviewImg from "./devon-rich-preview.png";
@@ -30,9 +27,6 @@ export {
   Services1,
   Services2,
   Services3,
-  ContactMeBg,
-  AboutBg,
-  TestimonialsBg,
   Loading,
   Ty,
   DevonRichPreviewImg,

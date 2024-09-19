@@ -18,7 +18,7 @@ const Testimonials = () => {
   return (
     <div>
       <FixedBanner
-        bgImg="/images/testimonials-bg.jpg"
+        bgImg="/images/charles-river.jpg"
         title="Testimonials"
         subtitle="Helping you get more for your real estate."
       />
