@@ -47,9 +47,9 @@ export const way = COLORWAYS[GIFT.colorway];
 /* Listing-sheet summary. No price: this one is off market. */
 export const SUMMARY = [
   { label: "status", value: "sold" },
-  { label: "located", value: "Cupertino, CA" },
   { label: "days on market", value: "0" },
-  { label: "listed by", value: GIFT.from },
+  { label: "delivered by", value: GIFT.from },
+  { label: "for", value: GIFT.recipient },
 ];
 
 export const SPECS: { label: string; value: string }[] = [
