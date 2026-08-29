@@ -94,13 +94,13 @@ const Header = () => {
               src="/images/tpn/tpn-logo-black-text-no-bg.png"
               alt="The Proper Nest Real Estate"
               className="w-40 dark:hidden sm:w-48 lg:w-52"
-              priority={false}
+              priority={true}
             />
             <Picture
               src="/images/tpn/tpn-logo-white-text-no-bg.png"
               alt="The Proper Nest Real Estate"
               className="hidden w-40 dark:block sm:w-48 lg:w-52"
-              priority={false}
+              priority={true}
             />
           </span>
         </Link>
