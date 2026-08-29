@@ -21,7 +21,7 @@ type HeaderLink = {
 };
 
 /** Routes that render without the marketing chrome. */
-const CHROMELESS_ROUTES = ["/auth", "/admin"];
+const CHROMELESS_ROUTES = ["/auth", "/admin", "/birthday"];
 
 const Header = () => {
   const path = usePathname();

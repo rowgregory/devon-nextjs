@@ -5,8 +5,6 @@ import { RootLayoutWrapper } from "./(public)/(home)/root-layout";
 import { siteMetadata, siteViewport } from "@/lib/metadata";
 import JsonLd from "@/components/seo/JsonLd";
 
-// `variable` rather than `className` — globals.css maps --font-body into
-// the Tailwind theme, so the utility `font-sans` resolves to Inter.
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",

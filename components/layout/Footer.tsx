@@ -8,7 +8,7 @@ import { IconComponent } from "../_shared/icons/types";
 import FacebookIcon from "../_shared/icons/FacebookIcon";
 import InstagramIcon from "../_shared/icons/InstagramIcon";
 
-const CHROMELESS_ROUTES = ["/auth", "/admin"];
+const CHROMELESS_ROUTES = ["/auth", "/admin", "/birthday"];
 
 const PHONE_DISPLAY = "+1 (978) 818 5303";
 const PHONE_HREF = "tel:+19788185303";
